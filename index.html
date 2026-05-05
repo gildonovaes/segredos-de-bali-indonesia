@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 1ª PARTE: FOTO NO BALÃO DO WHATSAPP (ANTI-CORTE) -->
+    <!-- CONFIGURAÇÃO DO BALÃO DO WHATSAPP (TEXTO CURTO PARA NÃO CORTAR) -->
     <title>Vida Simples na Indonésia</title>
-    <!-- ABAIXO A ALTERAÇÃO SOLICITADA NO TÍTULO -->
-    <meta property="og:title" content="YouTube - *VIDA SIMPLES NA INDONÉSIA*">
-    <meta property="og:description" content="Motoboy saiu rico dessa casa em Bali? Clique para ver o vídeo!">
+    <!-- Título direto para caber no celular -->
+    <meta property="og:title" content="Motoboy ficou rico em Bali?">
+    <!-- Descrição limpa e sem asteriscos -->
+    <meta property="og:description" content="YouTube — VIDA SIMPLES NA INDONÉSIA">
+    
     <meta property="og:image" content="https://i.ibb.co.com/Nn6dqvZV/Captura-de-tela-2026-05-05-084314.jpg">
     <meta property="og:image:secure_url" content="https://i.ibb.co.com/Nn6dqvZV/Captura-de-tela-2026-05-05-084314.jpg">
     <meta property="og:image:type" content="image/jpeg">
@@ -53,17 +55,15 @@
     </div>
 
     <div class="container">
-        <!-- 2ª PARTE: BANNER DENTRO DA PÁGINA -->
+        <!-- BANNER DENTRO DA PÁGINA -->
         <img src="https://i.ibb.co.com/d00GqfY4/Captura-de-tela-2026-05-04-204411.jpg" class="banner-site">
         
         <div class="content">
             <div class="alert" id="status-msg">
                 🔒 ACESSO BLOQUEADO
             </div>
-
             <h2>Vida simples na Indonésia</h2>
             <p style="font-size: 14px; color: #bbb;">Compartilhe no WhatsApp para liberar o vídeo e apoie o canal Vida simples na Indonésia compartilhando esse conteúdo.</p>
-
             <button class="btn btn-ws" onclick="fazerPartilha()">
                 1. COMPARTILHE COM TRÊS PESSOAS
             </button>
@@ -77,7 +77,6 @@
 
         function fazerPartilha() {
             window.location.href = "whatsapp://send?text=" + msgTextoZap;
-
             window.onfocus = function() {
                 setTimeout(() => {
                     document.getElementById('popup').classList.add('ativo');
