@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 1ª PARTE: FOTO NO BALÃO DO WHATSAPP (ANTI-CORTE) -->
+    <title>Vida Simples na Indonésia</title>
+    <meta property="og:title" content="*VIDA SIMPLES NA INDONÉSIA*">
+    <meta property="og:description" content="Motoboy saiu rico dessa casa em Bali? Clique para ver o vídeo!">
+    <meta property="og:image" content="https://i.ibb.co.com/Nn6dqvZV/Captura-de-tela-2026-05-05-084314.jpg">
+    <meta property="og:image:secure_url" content="https://i.ibb.co.com/Nn6dqvZV/Captura-de-tela-2026-05-05-084314.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:type" content="website">
+
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0b0b0b; color: #fff; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .container { width: 95%; max-width: 450px; background: #1a1a1a; border-radius: 15px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.8); border: 1px solid #333; text-align: center; box-sizing: border-box; }
+        .banner-site { width: 100%; height: auto; display: block; border-bottom: 3px solid #ff0000; }
+        .content { padding: 25px; box-sizing: border-box; }
+        h2 { font-size: 20px; margin: 10px 0; color: #ff0000; }
+        
+        .btn { display: block; width: 100%; padding: 18px 10px; margin: 15px auto; border: none; border-radius: 10px; font-weight: bold; font-size: 16px; cursor: pointer; text-decoration: none; text-align: center; box-sizing: border-box; }
+        .btn-ws { background: #25D366; color: white; }
+        
+        .alert { background: #331a1a; color: #ff4444; padding: 12px; font-size: 13px; border-radius: 8px; margin-bottom: 15px; border: 1px solid #ff0000; }
+
+        #popup { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999; justify-content: center; align-items: center; }
+        #popup.ativo { display: flex; }
+        .popup-box { background: #1a1a1a; border: 2px solid #ff0000; border-radius: 20px; padding: 30px 20px; width: 85%; max-width: 380px; text-align: center; }
+        .popup-box h2 { color: #ff0000; margin-bottom: 10px; font-size: 22px; }
+        .popup-box p { color: #ccc; font-size: 14px; margin-bottom: 20px; }
+        .btn-inscrever { background: #ff0000; color: white; padding: 15px; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; margin-bottom: 10px; }
+        .btn-fechar { background: transparent; color: #888; border: none; font-size: 13px; cursor: pointer; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <!-- COOKIE INVISÍVEL SHOPEE -->
+    <iframe src="https://s.shopee.com.br/9KecZ6ir9U?share_channel_code=1" style="width:0;height:0;border:0;display:none;"></iframe>
+
+    <div id="popup">
+        <div class="popup-box">
+            <h2>🔔 Se inscreva no Canal!</h2>
+            <p>Não perca nenhum conteúdo exclusivo. Inscreva-se agora e ative o sininho!</p>
+            <button class="btn-inscrever" onclick="irParaCanal()">✅ INSCREVER-SE AGORA</button>
+            <button class="btn-fechar" onclick="fecharPopup()">Agora não</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 2ª PARTE: BANNER DENTRO DA PÁGINA (FOTO QUE VOCÊ ENVIOU AGORA) -->
+        <img src="https://i.ibb.co.com/d00GqfY4/Captura-de-tela-2026-05-04-204411.jpg" class="banner-site">
+        
+        <div class="content">
+            <div class="alert" id="status-msg">
+                🔒 ACESSO BLOQUEADO
+            </div>
+
+            <h2>Vida simples na Indonésia</h2>
+            <p style="font-size: 14px; color: #bbb;">Compartilhe no WhatsApp para liberar o vídeo e apoie o canal Vida simples na Indonésia compartilhando esse conteúdo.</p>
+
+            <button class="btn btn-ws" onclick="fazerPartilha()">
+                1. COMPARTILHE COM TRÊS PESSOAS
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const canal = "https://youtube.com/@vidasimplesnaindonesia?sub_confirmation=1";
+        const video = "https://youtube.com/shorts/O-wzJIxmkgY?si=vOmd3IT5IM4G3Avh"; 
+        const msgTextoZap = encodeURIComponent("Motoboy saiu rico dessa casa em Bali? Assista aqui no canal Vida simples na Indonésia: " + window.location.href);
+
+        function fazerPartilha() {
+            window.location.href = "whatsapp://send?text=" + msgTextoZap;
+
+            window.onfocus = function() {
+                setTimeout(() => {
+                    document.getElementById('popup').classList.add('ativo');
+                }, 1000);
+                window.onfocus = null;
+            };
+        }
+
+        function irParaCanal() {
+            window.open(canal, '_blank');
+            setTimeout(() => { window.location.href = video; }, 1000);
+        }
+
+        function fecharPopup() {
+            document.getElementById('popup').classList.remove('ativo');
+            window.location.href = video;
+        }
+    </script>
+
+</body>
+</html>
